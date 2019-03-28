@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A&S Express</title>
+</head>
+<body>
+  <center>
+     <h1>A&S Express<br></h1>
+  </center>   
+  <center>
+    <table border="100">
+      <tr>
+        <td>
+          <fieldset>
+           <legend><h2>You Choose According To your Convenience</h2></legend>
+            <form method="post">
+            <center>
+			<table border="1" width="700px" height="280px">
+			<tr>
+
+				<th>BusName</th>
+				<th>Time</th>
+				<th>Price</th>
+				<th>Starting point</th>
+				<th>Ending Point</th>
+				<th>Choose Your Bus</th>
+			</tr>
+
+			<% for(var i=0; i < uList.length; i++){ %>
+			<tr>
+				<td align="middle"><%= uList[i].busid %></td>
+				<td align="middle"><%= uList[i].busname %></td>
+				<td align="middle"><%= uList[i].time %></td>
+				<td align="middle"><%= uList[i].price %></td>
+				<td align="middle"><%= uList[i].start %></td>
+				<td align="middle"><%= uList[i].end %></td>
+				<td>
+				<a style="color:red;" href="/userhome/sit/<%= uList[i].busid %>"><center>Choose Sit</center></a> 
+				</td>
+			</tr>
+			<% } %>
+		</table>
+		</center>
+		</form>
+    	</fieldset>
+        </td>
+      </tr>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A&S Express</title>
+</head>
+<body>
+  <center>
+     <h1>A&S Express<br></h1>
+  </center>   
+  <center>
+    <table border="100">
+      <tr>
+        <td>
+          <fieldset>
+           <legend><h2>This Is Your Ticket Plaease Collect It</h2></legend>
+            <form method="post">
+            <center>
+			<table>
+				<tr>
+					<th>BusId   :   &nbsp &nbsp  <input type="text"value="<%=busid%>" style="height: 20px" disabled></th>
+					<th>Busname :  &nbsp <input type="text"value="<%=busname%>" style="height: 20px" disabled></th>
+				</tr>
+				<tr>
+					<th>BusTime : <input type="text"value="<%=time%>" style="height: 20px" disabled></th>
+					<th>Cost &nbsp &nbsp : &nbsp &nbsp &nbsp <input type="text"value="<%=price%>" style="height: 20px" disabled></th>
+				</tr>
+				<tr>
+					<th>Start &nbsp &nbsp : &nbsp <input type="text" value="<%=start%>" style="height: 20px" disabled></th>
+					<th>End &nbsp &nbsp : &nbsp &nbsp &nbsp <input type="text"value="<%=end%>" style="height: 20px" disabled></th>
+				</tr>
+				<tr>
+					<th>Sit No : &nbsp &nbsp <input type="text"value="<%=sii%>" style="height: 20px" disabled></th>		
+					<th>Name &nbsp : &nbsp &nbsp &nbsp <input type="text"value="<%=name%>" style="height: 20px" disabled></th>
+				</tr>
+				<tr>
+					<th>Phone : &nbsp &nbsp  <input type="text"value="<%=phone%>" style="height: 20px" disabled></th>
+					<th>Email &nbsp : &nbsp &nbsp &nbsp <input type="text"value="<%=email%>"style="height: 20px" disabled></th>
+				</tr>
+			</table>
+			<br><input type="submit" name="submit"  style="height: 40px; width: 80px" value="Print">
+		</table>
+		</center>
+            </center>
+          </fieldset>
+        </td>
+      </tr>
+    </body>
+</html>

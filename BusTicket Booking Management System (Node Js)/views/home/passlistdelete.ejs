@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>BusList</title>
+	  <link rel="stylesheet" type="text/css"   href="/css/style.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+            <header>
+            	<nav>
+                        <div class="logo">
+                              A&S Enterpeise
+                        </div>
+
+                        <div class="menu">
+            <ul>
+				<li><a href = "/home">Home</a></li>
+                <li><a href = "/home/userlist">Bus List</a></li>
+                <li><a href = "/home/addbus">Add Bus</a></li>
+                <li><a href= "/home/passlist">Passenger List</a></li>
+                <li><a href= "/home/seller">Ticket Seller</a></li>
+				<li><a href= "/home/profile">Profile</a></li>
+                <li><a href= "/home/logout">Logout</a></li>
+            </ul>        
+                        </div>
+                    </nav>
+                <div>
+                	<br><br><br><br><br>
+                	<center>
+                			<h3>Delete Businfo</h3>
+
+		<center>
+		<table width="300px">
+			<tr>
+				<th>Ticket_Id</th>
+				<td>:</td>
+			<td><%=tid%></td>
+		</tr>
+		<tr>
+			<th>Bus_Name</th>
+			<td>:</td>
+			<td><%=busname%></td>
+		</tr>
+		<tr>
+			<th>Time</th>
+			<td>:</td>
+			<td><%=time%></td>
+		</tr>
+		<tr>
+			<th>Price</th>
+			<td>:</td>
+			<td><%=price%></td>
+		</tr>
+		<tr>
+			<th>Starting point</th>
+			<td>: </td>
+			<td><%=start%></td>
+		</tr>
+		<tr>
+			<th>Ending point</th>
+			<td>: </td>
+			<td><%=end%></td>
+		</tr>
+		<tr>
+			<th>Sit No</th>
+			<td>: </td>
+			<td><%=sii%></td>
+		</tr>
+		<tr>
+			<th>User Name</th>
+			<td>: </td>
+			<td><%=name%></td>
+		</tr>
+		<tr>
+			<th>Phone No</th>
+			<td>: </td>
+			<td><%=phone%></td>
+		</tr>
+				<tr>
+			<th>Email</th>
+			<td>: </td>
+			<td><%=email%></td>
+		</tr>
+	</table>
+	</center>
+	<br>
+<b>Are you sure? this can't be undone if you click confirm!</b>
+
+<form method="post">
+		<input type="hidden" name="tid" value="<%=tid%>">
+		<br><input type="submit" name="delete" value="Confirm">
+</form>
+</center>
+</div>
+</header>
+</body>
+</html>

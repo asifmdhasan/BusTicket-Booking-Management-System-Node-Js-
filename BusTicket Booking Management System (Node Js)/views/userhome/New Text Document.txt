@@ -1,0 +1,215 @@
+                  <input type="reset" name="reset" style="height: 30px" onclick="myFunction()" value="Reset"></center>
+
+
+router.get('*', function(req, res, next){
+		if(req.session.username != null){
+			next();
+		}else{
+			res.redirect('/login');
+		}
+});
+
+
+
+
+
+
+//router.post('/showplace', (req, res)=>{
+	//var user={
+	//start : req.body.start,
+	//end : req.body.end
+	//};
+	//userModel.featchdata(user,function(results){
+		//if(results.length > 0){
+			//res.render('userhome/busdetails');
+	//	}
+	//});
+
+	
+//});
+
+
+INSERT INTO `bus`(`busid`, `busname`, `time`, `start`, `end`) VALUES (null,'a','a','a','a')
+
+
+
+				<a href="/home/update/<%= uList[i].busid %>">Edit</a> |
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A&S Express</title>
+</head>
+<body>
+
+      <center>
+          <h1>Welcome A&S Express</h1>
+          <h2>A&S Express Bookticket<br></h2>
+      </center>   
+
+      <center>
+          <table>
+              <tr>
+                <td>
+                <fieldset>
+                        <legend><h4>Search avaialable panel</h4></legend>
+						<form method="post">
+
+                        <table>
+
+                          <tr>
+                            <td>
+
+                Sourcec :<br>
+                  <select name="start" style="width: 200px">
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Bogura">Bogura</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                  </select>
+                  </td>
+                  <td><br>
+                &ensp; To &ensp;
+                </td>
+                <td>
+                Destination :<br>
+                  <select name="end" style="width: 200px">
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Bogura">Bogura</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                  </select>
+                </td>
+              </tr>
+              </table>
+              
+                  <br><br><br><center>
+				  <input type="submit" name="submit"style="height: 30px" value="Submit">&ensp;
+				  </center>
+                  </form>
+
+              </fieldset>
+            </td>
+          </tr>
+          </table>
+        </center>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+	
+//SHOW ALL Table Info
+	//getuserlist: function(callback){
+	//	var sql = "select * from bus";
+
+	//	db.getResult(sql, [], function(result){
+		//	callback(result);
+		//});
+	//},
+
+//Using Id Get Data
+	//featchdata : function(user, callback){
+		//var sql = "select * from bus where busid=?";
+		
+		//db.getResult(sql, [busId], function(result){
+			//callback(result);
+		//});
+	//},
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.post('/info', (req, res)=>{
+		req.session.username = req.body.username;
+		req.session.phone = req.body.phone;
+		req.session.email = req.body.email;
+		var user ={
+		busid: req.params.busid,
+		busname : req.params.busname,
+		time : req.session.time,
+		start : req.session.start,
+		end : req.session.end,
+		sii : req.session.sii,
+		username : req.session.username,
+		phone : req.session.phone,
+		email : req.session.email
+	};
+		res.render('userhome/ticket',user);
+});
+
+
+
+
+
+
+
+
+router.get('/ticket', (req, res)=>{
+		var user ={
+		busid: req.params.busid,
+		busname : req.params.busname,
+		time : req.session.time,
+		start : req.session.start,
+		end : req.session.end,
+		username : req.session.username,
+		phone : req.session.phone,
+		email : req.session.email
+	};
+		res.render('userhome/ticket',user);
+});
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>BusList</title>
+	  <link rel="stylesheet" type="text/css"   href="/css/sellerstyle.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo">
+			A&S Enterpeise
+        </div>
+		<div class="menu">
+            <ul>
+				<li><a href = "/sellerhome">Home</a></li>
+                <li><a href = "/sellerhome/buslist">Bus List</a></li>
+                <li><a href = "/sellerhome/addbus">Add Bus</a></li>
+                <li><a href= "/sellerhome/passlist">Passenger List</a></li>
+                <li><a href= "/sellerhome/profile">Profile</a></li>
+                <li><a href= "/sellerhome/logout">Logout</a></li>
+            </ul>          
+        </div>
+    </nav>
+    <div>
+        <br><br><br>
+        <center>
+        <h3>Bus List</h3>
+		<table border="1" width="800px" >
+		<tr>
+			<th>ID</th>
+			<th>BusName</th>
+			<th>Time</th>
+			<th>Price</th>
+			<th>starting point</th>
+			<th>Ending Point</th>
+			<th>Action</th>
+		</tr>
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td><%= uList[i].busid %></td>
+			<td><%= uList[i].busname %></td>
+			<td><%= uList[i].time %></td>
+			<td><%= uList[i].price %></td>
+			<td><%= uList[i].start %></td>
+			<td><%= uList[i].end %></td>
+			<td>
+				<a href="/sellerhome/busupdate/<%= uList[i].busid %>">Edit</a> |
+				<a style="color:red;" href="/sellerhome/busdelete/<%= uList[i].busid %>">Delete</a> 
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</center>
+</div>
+</header>
+</body>
+</html>

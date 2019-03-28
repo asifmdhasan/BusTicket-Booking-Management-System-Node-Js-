@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>BusList</title>
+	  <link rel="stylesheet" type="text/css"   href="/css/stylesellerr.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+
+            <header>
+            	<nav>
+                        <div class="logo">
+                              A&S Enterpeise
+                        </div>
+
+                        <div class="menu">
+                              <ul>
+                                    <li><a href = "/sellerhome">Home</a></li>
+                                    <li><a href = "/sellerhome/buslist">Bus List</a></li>
+                                    <li><a href = "/sellerhome/addbus">Add Bus</a></li>
+                                    <li><a href= "/sellerhome/passlist">Passenger List</a></li>
+                                    <li><a href= "/sellerhome/profile">Profile</a></li>
+                                    <li><a href= "/sellerhome/logout">Logout</a></li>
+                              </ul>          
+                        </div>
+                    </nav>
+                <div>
+                	<br><br><br>
+                	<center>
+                			<h3>Update Businfo</h3>
+		
+<form method="post">
+				<center>
+				<table width="400px">
+						<tr>
+							<th>Bus Id :</th>
+							<td><input type="text"placeholder="Name" name="busid"value="<%=busid%>" disabled></td>
+						</tr>
+						<tr>
+							<th>Bus Name :</th>
+							<td><input type="text"placeholder="Name" name="busname"value="<%=busname%>"></td>
+						</tr>
+	
+						<tr>
+							<th>Time :</th>
+							<td><input type="text"placeholder="Time" name="time"value="<%=time%>"></td>
+						</tr>
+						
+						<tr>
+							<th>Price :</th>
+							<td><input type="text"placeholder="Price" name="price"value="<%=price%>"></td>
+						</tr>
+	
+						<tr>
+							<th>Starting Point:</th>
+
+							<td><input type="text"placeholder="Starting Point" name="start"value="<%=start%>"></td>
+						</tr>	
+	
+						<tr>
+							<th>Ending Point:</th>
+							<td><input type="text"placeholder="Ending Point" name="end"value="<%=end%>"></td>
+						</tr>
+				</table>
+				</center>
+				<center>
+					<br><input name="submit" type="submit" value="Submit"/>
+				</center>
+				</form>
+			</td>
+		</tr>
+</center>
+</div>
+</header>
+</body>
+</html>
